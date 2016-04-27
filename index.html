@@ -31,9 +31,9 @@ limitations under the License.
 	    font-size:40px;
 	}
 
-	#good { padding: 250px; background: green; }
-	#bad { padding: 250px; background: red; }
-	#try { padding: 250px; background: yellow; }
+	#good { padding: 25px; background: green; }
+	#bad { padding: 25px; background: red; }
+	#try { padding: 25px; background: yellow; }
 
     </style>
     <title>Cast Hello Text</title>
@@ -43,7 +43,7 @@ limitations under the License.
 	<DIV id="container">
 		<span id="good"></span>
 		<span id="bad"></span>
-		<span id="try"></span>
+		<span id="try">what</span>
 	</DIV>
 
 
@@ -98,7 +98,7 @@ limitations under the License.
         messageBus.onMessage = function(event) {
           console.log('Message [' + event.senderId + ']: ' + event.data);
           // display the message from the sender
-          displayText('good', event.data);
+          displayText(type, event.data);
           // inform all senders on the CastMessageBus of the incoming message event
           // sender message listener will be invoked
           messageBus.send(event.senderId, event.data);
