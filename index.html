@@ -18,14 +18,14 @@ limitations under the License.
 	    overflow:hidden;
 	  }
       div{
-	    height: 100%;
-	    width: 100%;
+	    height:720PX;
+	    width:1280PX;
 	    text-align:center;
 	    border:0px solid silver;
 	    display: table-cell;
 	    vertical-align:middle;
 	    color:#FFFFFF;
-	    background-color: #00f;
+	    background-color:#f0f;
 	    font-weight:bold;
 	    font-family:Verdana, Geneva, sans-serif;
 	    font-size:40px;
@@ -69,8 +69,7 @@ limitations under the License.
         };
         // create a CastMessageBus to handle messages for a custom namespace
         window.messageBus =
-          window.castReceiverManager.getCastMessageBus(
-              'urn:x-cast:com.google.cast.sample.helloworld');
+          window.castReceiverManager.getCastMessageBus('urn:x-cast:ca.iwd.retroapp');
         // handler for the CastMessageBus message event
         window.messageBus.onMessage = function(event) {
           console.log('Message [' + event.senderId + ']: ' + event.data);
