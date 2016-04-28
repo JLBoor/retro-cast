@@ -87,7 +87,7 @@ limitations under the License.
 
       function bindStickyBus() {
       	// create a CastMessageBus to handle messages for a custom namespace
-        var messageBus = window.castReceiverManager.getCastMessageBus('urn:x-cast:ca.iwd.retroapp';
+        var messageBus = window.castReceiverManager.getCastMessageBus('urn:x-cast:ca.iwd.retroapp');
         // handler for the CastMessageBus message event
         messageBus.onMessage = function(event) {
           console.log('Message [' + event.senderId + ']: ' + event.data);
