@@ -20,15 +20,13 @@ limitations under the License.
       #container {
 	    height:720PX;
 	    width:1280PX;
-	    text-align:center;
-	    border:0px solid silver;
-	    display: table-cell;
+	    text-align: center;
 	    vertical-align:middle;
-	    color:#FFFFFF;
-	    background-color:#f0f;
+	    color:black;
+	    background-color: #fff;
 	    font-weight:bold;
 	    font-family:Verdana, Geneva, sans-serif;
-	    font-size:40px;
+	    font-size: 40px;
 	}
 
 	#good { padding: 25px; background: green; }
@@ -36,15 +34,11 @@ limitations under the License.
 	#try { padding: 25px; background: yellow; }
 
     </style>
-    <title>Cast Hello Text</title>
+    <title>Cast Retro App</title>
   </head>
   <body>
 	
-	<DIV id="container">
-		<span id="good"></span>
-		<span id="bad"></span>
-		<span id="try">what</span>
-	</DIV>
+	<ul id="container"></ul>
 
 
     <script type="text/javascript" src="//www.gstatic.com/cast/sdk/libs/receiver/2.0.0/cast_receiver.js"></script>
@@ -91,14 +85,14 @@ limitations under the License.
         console.log('Receiver Manager started');
       };
 
-      function bindStickyBus(type) {
+      function bindStickyBus() {
       	// create a CastMessageBus to handle messages for a custom namespace
-        var messageBus = window.castReceiverManager.getCastMessageBus('urn:x-cast:ca.iwd.retroapp.sticky.' + type);
+        var messageBus = window.castReceiverManager.getCastMessageBus('urn:x-cast:ca.iwd.retroapp';
         // handler for the CastMessageBus message event
         messageBus.onMessage = function(event) {
           console.log('Message [' + event.senderId + ']: ' + event.data);
           // display the message from the sender
-          displayText(type, event.data);
+          displayText(event.data);
           // inform all senders on the CastMessageBus of the incoming message event
           // sender message listener will be invoked
           messageBus.send(event.senderId, event.data);
@@ -106,9 +100,9 @@ limitations under the License.
       }
       
       // utility function to display the text message in the input field
-      function displayText(id, text) {
+      function displayText(text) {
 		console.log(text);
-        document.getElementById(id).innerHTML = text;
+        document.getElementById('#container').append('<li>' + text + '</li>');
         window.castReceiverManager.setApplicationState(text);
       };
     </script>
