@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Retros</string>
+
+    <string name="google_app_id">1025347376934</string>
+
+    <string name="chromecast_app_id">6EC9FD81</string>
+    <string name="chromecast_namespace">urn:x-cast:ca.iwd.retroapp</string>
+
+    <string name="action_cast">Cast</string>
+
+    <string name="title_activity_retro">Retro Room</string>
+    <string name="title_activity_create_retro">Create New Retro</string>
+
+    <string name="create_retro_project_name_hint">Project name</string>
+    <string name="create_retro_room_name_hint">Room</string>
+    <string name="create_retro_create_button">Create</string>
+
+    <string name="retro_message_hint">Message...</string>
+    <string name="retro_send_hint">Send</string>
+
+</resources>
