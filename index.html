@@ -102,7 +102,9 @@ limitations under the License.
       // utility function to display the text message in the input field
       function displayText(text) {
 		console.log(text);
-        document.getElementById('#container').append('<li>' + text + '</li>');
+		var li = document.createElement('li');
+		li.textContent = text;
+        document.querySelector('#container').appendChild(li);
         window.castReceiverManager.setApplicationState(text);
       };
     </script>
